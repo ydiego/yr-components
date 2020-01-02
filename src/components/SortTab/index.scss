@@ -1,0 +1,43 @@
+.tab-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  .tab-item {
+    flex: 1;
+    font-size: 15px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #999999;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    &.active {
+      color: #ff0050;
+      font-family: PingFangSC-Semibold;
+      font-weight: 600;
+    }
+    .triangle {
+      width: 0;
+      height: 0;
+      border-width: 4px;
+      border-style: solid;
+      position: absolute;
+      margin-left: 2px;
+      &.top {
+        border-color: transparent transparent #999 transparent;
+        top: 10px;
+      }
+      &.top-active {
+        border-color: transparent transparent #ff0050 transparent;
+      }
+      &.bottom {
+        border-color: #999 transparent transparent transparent;
+        bottom: 10px;
+      }
+      &.bottom-active {
+        border-color: #ff0050 transparent transparent transparent
+      }
+    }
+  }
+}
